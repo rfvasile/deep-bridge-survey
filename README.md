@@ -5,7 +5,7 @@ The report is available [here](docs/report.pdf) and the poster [here](docs/poste
 
 <!-- TABLE OF CONTENTS -->
 
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
       <li>
@@ -29,7 +29,7 @@ The report is available [here](docs/report.pdf) and the poster [here](docs/poste
       <a href="#simple-cudnn-network">Simple cuDNN Network</a>
       <ul>
         <li><a href="#dependencies">Dependencies</a></li>
-        <li><a href="#building-and-running-the-code">Building and running the code</a></li>
+        <li><a href="#running-the-code">Building and running the code</a></li>
         <li><a href="#code-walkthrough">Code walkthrough</a></li>
       </ul>
     </li>
@@ -202,7 +202,7 @@ The main training file is [train.py](./distributed/train.py).
    - Current default: `nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04` (compatible with 40xx series GPUs)
    - Find your compatible image tag at [NVIDIA CUDA Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags)
 
-## Building and running the Code
+## Running the Code
 
 Run the following to compile and run the code:
 
@@ -212,6 +212,7 @@ docker-compose up -d # start the cotaniner
 docker-compose exec cuda_dev bash # enter the container
 ./compile_benchmark.sh # or ./compile_toynetwork.sh
 ./runner
+
 # Sample output for benchmark:
 # Average forward pass time: 0.185160 ms
 # Average backward input pass time: 0.161860 ms
